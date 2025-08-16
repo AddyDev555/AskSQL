@@ -6,13 +6,14 @@ export default function Output({ prompt, dbs, geminiMessage, dbFilePath, token }
     const [logs, setLogs] = useState([]);
     const [showLogs, setShowLogs] = useState(false);
     const [isLoadingLogs, setIsLoadingLogs] = useState(false);
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
     const fetchLogs = async () => {
         if (!token) return;
         
         setIsLoadingLogs(true);
         try {
-            const response = await fetch(`http://localhost:5000/fetch-logs`, {
+            const response = await fetch(`${apiUrl}/fetch-logs`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -17,6 +17,7 @@ export default function PromptForm({
     const inputRef = React.useRef(null);
     const [isProcessing, setIsProcessing] = useState(false);
     const [error, setError] = useState('');
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
     const processPrompt = async () => {
         if (!prompt.trim()) {
@@ -33,7 +34,7 @@ export default function PromptForm({
         }
 
         try {
-            const response = await fetch("http://127.0.0.1:5000/process_prompt", {
+            const response = await fetch(`${apiUrl}/process_prompt`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
