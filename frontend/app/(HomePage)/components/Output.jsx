@@ -64,7 +64,7 @@ export default function Output({ prompt, dbs, geminiMessage, dbFilePath, token }
                         </p>
                         <div className="flex flex-wrap items-center gap-4 mt-4">
                             <HierarchyDropdown dbs={dbs} />
-                            <a href={`http://localhost:5000/download_db?path=${encodeURIComponent(dbFilePath)}`}
+                            <a href={`${apiUrl}/download_db?path=${encodeURIComponent(dbFilePath)}`}
                                 download
                                 target="_blank"
                                 rel="noopener noreferrer">
