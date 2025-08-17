@@ -128,7 +128,7 @@ export default function PromptForm({
                 <div className="flex items-center space-x-2">
                     <div className="flex relative left-13.5 items-center space-x-0.5 border rounded pr-1.5 border-white bg-white/10 backdrop-blur-sm">
                         <KeyIcon />
-                        <span className="text-sm pt-0.5 text-white">K</span>
+                        <span className="text-sm pt-0.5">K</span>
                     </div>
                     <Input
                         ref={inputRef}

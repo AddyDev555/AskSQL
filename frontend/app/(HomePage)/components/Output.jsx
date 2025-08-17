@@ -150,7 +150,7 @@ export default function Output({ prompt, dbs, geminiMessage, dbFilePath, token }
                 </>
             ) : (
                 <div className="text-center py-12">
-                    <h1 className="text-2xl font-bold text-gray-800 mb-2">Welcome to AskSQL</h1>
+                    <h1 className="text-2xl font-bold mb-2">Welcome to AskSQL</h1>
                     <p className="text-gray-600">Generate database schemas with AI assistance</p>
                 </div>
             )}
